@@ -1,0 +1,13 @@
+{
+    "name": "kafka_node",
+    "description": "Installs and configures Kafka node",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+    },
+    "override_attributes": {
+    },
+    "run_list": [
+        "recipe[kafka_node]"
+    ]
+}

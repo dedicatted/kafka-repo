@@ -1,0 +1,27 @@
+.rake_test_cache
+
+###
+# Ignore Chef key files and secrets
+###
+.chef
+
+
+.vagrant
+Berksfile.lock
+Cheffile.lock
+Gemfile.lock
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+.bundle
+.cache
+.kitchen
+bin
+.kitchen.local.yml
+.kitchen/
+.librarian/
+tmp/
+debug.*

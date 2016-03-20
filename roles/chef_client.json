@@ -1,0 +1,20 @@
+{
+    "name": "chef_client",
+    "description": "Configures Chef client",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+	"chef_client": {
+	    "interval": 11300,
+	    "splay": 60,
+	    "daemon_options": [
+		"--logfile /var/log/chef/client.log"
+	    ]
+	}
+    },
+    "override_attributes": {
+    },
+    "run_list": [
+        "recipe[chef-client]"
+    ]
+}
