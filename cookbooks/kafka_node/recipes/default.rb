@@ -23,7 +23,7 @@ def yellow(text); colorize(text, 33); end
 # Main
 include_recipe 'java::default'
 
-this_node = search( :node, "name:#{node.fqdn}" )[0]
+this_node = search( :node, "fqdn:#{node.fqdn}" )[0]
 current_broker_id = -1
 new_broker_id = "undefined"
 broker_id_collision = false
@@ -31,7 +31,7 @@ current_zookeeper_connect = "undefined"
 zookeeper_servers = "undefined"
 
 # Assign unique broker.id
-k_nodes_list = search( :node, "role:kafka_node AND -name:#{node.fqdn}" )
+k_nodes_list = search( :node, "role:kafka_node AND -fqdn:#{node.fqdn}" )
 
 kafka_broker_ids = []
 current_broker_id = get_broker_id(this_node)
