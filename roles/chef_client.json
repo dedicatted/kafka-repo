@@ -5,8 +5,8 @@
     "json_class": "Chef::Role",
     "default_attributes": {
 	"chef_client": {
-	    "interval": 11300,
-	    "splay": 60,
+	    "interval": 1800,
+	    "splay": 300,
 	    "daemon_options": [
 		"--logfile /var/log/chef/client.log"
 	    ]
